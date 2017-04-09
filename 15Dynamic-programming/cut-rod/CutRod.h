@@ -11,7 +11,7 @@ int CUT_ROD(const int *price, int length)
 	
 	for(i = 1; i <=length; i++)
 	{
-		int tmp_max = price[i] + CUT_ROD(price, length - i)
+		int tmp_max = price[i-1] + CUT_ROD(price, length - i);
 		if(q < tmp_max)
 			q = tmp_max;
 	}
