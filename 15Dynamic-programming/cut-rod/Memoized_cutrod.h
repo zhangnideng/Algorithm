@@ -3,14 +3,16 @@
 
 #include <string.h>
 
-#define MAX_LENGTH
+#define MAX_LENGTH 128
+
+static int r1[MAX_LENGTH] = {0};
 
 int memoized_cutrod(const int *price, int length)
 {
-	static int r[MAX_LENGTH] = {0};
-	memset(r, -1, MAX_LENGTH * sizeof(int));
+	if(r1[MAX_LENGTH - 1] == 0)		//When first call the API, initialize the array.
+		memset(r1, -1, MAX_LENGTH * sizeof(int));
 
-	return memoized_cut_rod_aux(p, n, r);
+	return memoized_cut_rod_aux(price, length, r1);
 }
 
 int memoized_cut_rod_aux(const int *price, int length, int *r)
@@ -25,7 +27,7 @@ int memoized_cut_rod_aux(const int *price, int length, int *r)
 	else
 	{
 		int i = 0;
-		for(i = 1; i < length; i++)
+		for(i = 1; i <= length; i++)
 		{
 			int tmp = price[i-1] + memoized_cut_rod_aux(price, length - i, r);
 			if(q < tmp)
