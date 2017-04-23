@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "recursive_activity_selector.h"
+#include "greedy_activity_selector.h"
 
 int main()
 {
@@ -9,6 +10,9 @@ int main()
 
 	recursive_activity_selector(start, finish, 0, n-1);
 	activity_get_number();
+
+	greedy_activity_selector(start, finish, 0, n-1);
+	greedy_get_number();
 
 	return 0;
 }
