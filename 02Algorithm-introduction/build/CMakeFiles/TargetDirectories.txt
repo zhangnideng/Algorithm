@@ -1,0 +1,1 @@
+/home/user/git/Algorithm/02Algorithm-introduction/build/CMakeFiles/test.dir
