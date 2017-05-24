@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "insertion-sort.h"
 
-#define DEBUG
+//#define DEBUG
 
 #ifdef DEBUG
 
@@ -38,7 +38,7 @@ static void print_array(int A[], int n)
 	PRINTF("current array: ");
 	for(i = 0; i < n; i++)
 	{
-		printf("%d ", A[i]);
+		PRINTF("%d ", A[i]);
 	}
 	PRINTF("\n");
 }

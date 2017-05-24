@@ -8,9 +8,11 @@ message(STATUS "This is project source dir " ${PROJECT_SOURCE_DIR})
 get_filename_component(ROOT ${PROJECT_SOURCE_DIR}/.. REALPATH)
 
 include_directories(${ROOT}/code/insertion)
+include_directories(${ROOT}/code/merge)
 
 aux_source_directory(${ROOT}/code DIR)
 aux_source_directory(${ROOT}/code/insertion DIR)
+aux_source_directory(${ROOT}/code/merge DIR)
 
 #add_subdirectory(${ROOT}/code/insertion)
 

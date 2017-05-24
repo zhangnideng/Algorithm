@@ -1,1 +1,0 @@
-/usr/bin/cc      CMakeFiles/test.dir/home/user/git/Algorithm/02Algorithm-introduction/code/main.c.o CMakeFiles/test.dir/home/user/git/Algorithm/02Algorithm-introduction/code/insertion/insertion-sort.c.o  -o test -rdynamic 
