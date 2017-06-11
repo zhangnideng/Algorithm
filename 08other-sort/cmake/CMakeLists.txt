@@ -8,8 +8,10 @@ message(STATUS "This is project source dir " ${PROJECT_SOURCE_DIR})
 get_filename_component(ROOT ${PROJECT_SOURCE_DIR}/.. REALPATH)
 
 include_directories(${ROOT}/code/count_sort)
+include_directories(${ROOT}/code/bucket_sort)
 
 aux_source_directory(${ROOT}/code DIR)
 aux_source_directory(${ROOT}/code/count_sort DIR)
+aux_source_directory(${ROOT}/code/bucket_sort DIR)
 
 add_executable(test ${DIR})
