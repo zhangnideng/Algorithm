@@ -10,7 +10,8 @@ int main()
 	int num2 = sizeof(array2) / sizeof(int);
 	subarray result = {0, 0, 0};
 
-	result = find_maximum_subarray(array1, 0, num1-1);
+	printf("nlogn\n");
+	result = find_maximum_subarray_nlogn(array1, 0, num1-1);
 
 	for(i = result.low; i <= result.high; i++)
 	{
@@ -21,7 +22,7 @@ int main()
 	printf("The maximum subarray is %d, [%d - %d]\n", result.sum, result.low, result.high);
 
 	printf("\n");
-	result = find_maximum_subarray(array2, 0, num2-1);
+	result = find_maximum_subarray_nlogn(array2, 0, num2-1);
 
 	for(i = result.low; i <= result.high; i++)
 	{
@@ -31,5 +32,26 @@ int main()
 
 	printf("The maximum subarray is %d, [%d - %d]\n", result.sum, result.low, result.high);
 
+	printf("\nn2\n");
+	result = find_maximum_subarray_n2(array1, 0, num1-1);
+
+	for(i = result.low; i <= result.high; i++)
+	{
+		printf("%d ", array1[i]);
+	}
+	printf("\n");
+
+	printf("The maximum subarray is %d, [%d - %d]\n", result.sum, result.low, result.high);
+
+	printf("\nn\n");
+	result = find_maximum_subarray_n(array1, 0, num1-1);
+
+	for(i = result.low; i <= result.high; i++)
+	{
+		printf("%d ", array1[i]);
+	}
+	printf("\n");
+
+	printf("The maximum subarray is %d, [%d - %d]\n", result.sum, result.low, result.high);
 	return 0;
 }

@@ -7,10 +7,10 @@ message(STATUS "This is project source dir " ${PROJECT_SOURCE_DIR})
 
 get_filename_component(ROOT ${PROJECT_SOURCE_DIR}/.. REALPATH)
 
-include_directories(${ROOT}/code/divide_conquer)
+include_directories(${ROOT}/code/max_subarray)
 
 aux_source_directory(${ROOT}/code DIR)
-aux_source_directory(${ROOT}/code/divide_conquer DIR)
+aux_source_directory(${ROOT}/code/max_subarray DIR)
 
 #add_subdirectory(${ROOT}/code/insertion)
 
